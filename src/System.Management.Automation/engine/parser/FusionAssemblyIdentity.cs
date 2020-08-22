@@ -1,5 +1,16 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+// Code in this file was copied from https://github.com/dotnet/roslyn
 
 #if !CORECLR
+
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Reflection;
+using System.Runtime.InteropServices;
+
 namespace Microsoft.CodeAnalysis
 {
     internal sealed class FusionAssemblyIdentity
