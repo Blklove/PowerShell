@@ -7,7 +7,6 @@ using System.Collections.Specialized;
 using System.Management.Automation;
 using System.Management.Automation.Internal;
 using System.Threading;
-using System.Reflection;
 using Microsoft.PowerShell.Commands;
 using Xunit;
 

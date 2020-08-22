@@ -1,10 +1,6 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-using System.Collections;
-using System.Management.Automation.Remoting;
-using System.Management.Automation.Runspaces;
-
 namespace System.Management.Automation.Internal
 {
     /// <summary>

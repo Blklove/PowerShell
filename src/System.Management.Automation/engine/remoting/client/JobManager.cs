@@ -9,7 +9,6 @@ using System.Management.Automation.Runspaces;
 using System.Management.Automation.Tracing;
 using System.Reflection;
 using System.Security;
-using System.Threading;
 
 using Dbg = System.Management.Automation.Diagnostics;
 

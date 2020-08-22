@@ -10,7 +10,6 @@ using System.Management.Automation.Remoting;
 using System.Management.Automation.Runspaces;
 using System.Management.Automation.Runspaces.Internal;
 using System.Management.Automation.Tracing;
-using System.Reflection;
 using System.Threading;
 
 using Microsoft.PowerShell;

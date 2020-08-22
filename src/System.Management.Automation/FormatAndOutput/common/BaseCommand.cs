@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Management.Automation;
 using System.Management.Automation.Internal;
-using System.Management.Automation.Language;
 
 namespace Microsoft.PowerShell.Commands.Internal.Format
 {

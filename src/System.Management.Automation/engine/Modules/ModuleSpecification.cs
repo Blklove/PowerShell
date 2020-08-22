@@ -9,8 +9,6 @@ using System.Management.Automation.Internal;
 using System.Management.Automation.Language;
 using System.Text;
 
-using Dbg = System.Management.Automation.Diagnostics;
-
 //
 // Now define the set of commands for manipulating modules.
 //

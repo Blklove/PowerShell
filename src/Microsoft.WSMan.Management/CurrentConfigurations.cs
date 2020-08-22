@@ -2,7 +2,6 @@
 // Licensed under the MIT License.
 
 using System;
-using System.Globalization;
 using System.Xml;
 
 namespace Microsoft.WSMan.Management

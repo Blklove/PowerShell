@@ -9,7 +9,6 @@ using System.Management.Automation.Language;
 
 namespace System.Management.Automation
 {
-    using Dbg = Diagnostics;
     using System.Collections.ObjectModel;
 
     internal static class VariableOps

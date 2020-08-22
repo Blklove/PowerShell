@@ -26,7 +26,6 @@ using System.Xml;
 using Microsoft.Management.Infrastructure;
 #if !UNIX
 using System.DirectoryServices;
-using System.Management;
 #endif
 
 #pragma warning disable 1634, 1691 // Stops compiler from warning about unknown warnings

@@ -3,8 +3,6 @@
 
 using System.Management.Automation.Remoting.Client;
 
-using Dbg = System.Management.Automation.Diagnostics;
-
 namespace System.Management.Automation.Remoting
 {
     internal abstract class BaseSessionDataStructureHandler

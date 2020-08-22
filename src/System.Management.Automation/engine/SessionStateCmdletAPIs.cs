@@ -3,8 +3,6 @@
 
 using System.Collections.Generic;
 
-using Dbg = System.Management.Automation;
-
 namespace System.Management.Automation
 {
     /// <summary>

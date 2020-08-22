@@ -15,7 +15,6 @@ using System.Text;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Management.Automation.Language;
-using Dbg = System.Management.Automation.Diagnostics;
 
 namespace System.Management.Automation
 {

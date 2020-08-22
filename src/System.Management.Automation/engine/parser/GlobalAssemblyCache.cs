@@ -1,16 +1,3 @@
-// Copyright (c) Microsoft Corporation.
-// Licensed under the MIT License.
-
-// Code in this file was copied from https://github.com/dotnet/roslyn
-
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Globalization;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Runtime.InteropServices;
 
 #if !CORECLR // Only enable/port what is needed by CORE CLR.
 namespace Microsoft.CodeAnalysis

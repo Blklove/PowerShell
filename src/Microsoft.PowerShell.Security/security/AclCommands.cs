@@ -16,7 +16,6 @@ using System.Diagnostics.CodeAnalysis;
 using System.Runtime.InteropServices;
 using System.Globalization;
 using System.ComponentModel;
-using System.Reflection;
 
 namespace Microsoft.PowerShell.Commands
 {

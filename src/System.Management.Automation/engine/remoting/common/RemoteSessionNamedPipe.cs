@@ -12,7 +12,6 @@ using System.Runtime.InteropServices;
 using System.Security.AccessControl;
 using System.Security.Principal;
 using System.Threading;
-using System.Threading.Tasks;
 
 using Microsoft.Win32.SafeHandles;
 

@@ -10,8 +10,6 @@ using System.Management.Automation.Runspaces;
 
 namespace System.Management.Automation
 {
-    using Dbg = Diagnostics;
-
     internal static class StringOps
     {
         internal static string Add(string lhs, string rhs)

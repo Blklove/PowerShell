@@ -4,9 +4,6 @@
 using System.Collections;
 using System.Collections.ObjectModel;
 using System.Management.Automation.Internal;
-using System.Management.Automation.Language;
-
-using Dbg = System.Management.Automation.Diagnostics;
 
 namespace System.Management.Automation
 {

@@ -8,8 +8,6 @@ using System.Management.Automation.Runspaces;
 using System.Security.Principal;
 using System.Threading;
 
-using Dbg = System.Management.Automation.Diagnostics;
-
 namespace System.Management.Automation
 {
     /// <summary>

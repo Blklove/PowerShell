@@ -7,8 +7,6 @@ using System.Globalization;
 using System.Linq;
 using System.Management.Automation.Host;
 using System.Management.Automation.Runspaces;
-using System.Reflection;
-using System.Text;
 
 namespace System.Management.Automation.Language
 {

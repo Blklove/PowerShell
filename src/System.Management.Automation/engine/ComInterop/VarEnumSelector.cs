@@ -3,7 +3,6 @@
 
 #pragma warning disable 618 // The *Wrapper classes for COM are obsolete
 
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Reflection;

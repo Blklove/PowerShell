@@ -10,10 +10,8 @@ using System.Linq;
 using System.Management.Automation.Host;
 using System.Management.Automation.Internal;
 using System.Management.Automation.Runspaces;
-using System.Security;
 
 using Microsoft.PowerShell.Commands;
-using Microsoft.Win32;
 
 using Dbg = System.Management.Automation.Diagnostics;
 

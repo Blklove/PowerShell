@@ -4,10 +4,8 @@
 #if CORECLR
 
 using System;
-using System.Collections;
 using System.Globalization;
 using System.Xml;
-using System.Xml.Schema;
 
 #pragma warning disable
 

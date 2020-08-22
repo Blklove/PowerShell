@@ -4,8 +4,6 @@
 using System.Management.Automation.Host;
 using System.Management.Automation.Runspaces;
 
-using Dbg = System.Management.Automation.Diagnostics;
-
 namespace System.Management.Automation.Internal.Host
 {
     internal partial

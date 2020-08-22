@@ -8,7 +8,6 @@ using System.Linq;
 using System.Management.Automation;
 using System.Management.Automation.Internal;
 using System.Management.Automation.Runspaces;
-using System.Reflection;
 
 using Dbg = System.Management.Automation.Diagnostics;
 

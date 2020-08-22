@@ -18,7 +18,6 @@ using System.Management.Automation.Security;
 using System.Reflection;
 using System.Text;
 using System.Xml;
-using System.Diagnostics;
 
 using Microsoft.PowerShell.Cmdletization;
 

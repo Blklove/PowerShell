@@ -7,8 +7,6 @@ using System.Globalization;
 using System.Reflection;
 using System.Text;
 
-using Dbg = System.Management.Automation;
-
 namespace System.Management.Automation
 {
     /// <summary>

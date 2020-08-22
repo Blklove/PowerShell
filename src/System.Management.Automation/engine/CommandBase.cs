@@ -9,8 +9,6 @@ using System.Management.Automation.Internal.Host;
 using System.Management.Automation.Language;
 using System.Management.Automation.Runspaces;
 
-using Dbg = System.Management.Automation.Diagnostics;
-
 namespace System.Management.Automation.Internal
 {
     /// <summary>

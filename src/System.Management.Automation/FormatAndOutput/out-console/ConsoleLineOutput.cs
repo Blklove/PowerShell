@@ -5,7 +5,6 @@
 // characters
 //#define TEST_MULTICELL_ON_SINGLE_CELL_LOCALE
 
-using System;
 using System.Collections.Specialized;
 using System.Management.Automation;
 using System.Management.Automation.Internal;

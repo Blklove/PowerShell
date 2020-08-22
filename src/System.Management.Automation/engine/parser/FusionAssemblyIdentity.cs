@@ -1,13 +1,3 @@
-// Copyright (c) Microsoft Corporation.
-// Licensed under the MIT License.
-
-// Code in this file was copied from https://github.com/dotnet/roslyn
-
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Reflection;
-using System.Runtime.InteropServices;
 
 #if !CORECLR
 namespace Microsoft.CodeAnalysis

@@ -1,7 +1,6 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-using Dbg = System.Management.Automation.Diagnostics;
 
 // Warning: Events StartSteppablePipeline and RunProcessRecord are never used
 // They are actually used by the event manager in some dynamically generated IL

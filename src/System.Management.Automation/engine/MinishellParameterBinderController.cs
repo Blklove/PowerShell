@@ -5,10 +5,7 @@ using System.Collections;
 using System.Collections.ObjectModel;
 using System.Globalization;
 using System.IO;
-using System.Management.Automation.Language;
 using System.Xml;
-
-using Dbg = System.Management.Automation.Diagnostics;
 
 namespace System.Management.Automation
 {

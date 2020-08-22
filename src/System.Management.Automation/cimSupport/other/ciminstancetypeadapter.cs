@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Management.Automation;
-using System.Reflection;
 
 using Microsoft.Management.Infrastructure;
 

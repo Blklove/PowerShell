@@ -13,8 +13,6 @@
  *
  * ***************************************************************************/
 
-using System.Reflection;
-
 namespace System.Management.Automation.Interpreter
 {
     internal abstract class EqualInstruction : Instruction

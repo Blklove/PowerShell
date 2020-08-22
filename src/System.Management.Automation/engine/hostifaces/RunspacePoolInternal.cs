@@ -4,7 +4,6 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Management.Automation.Internal;
-using System.Management.Automation.Security;
 using System.Management.Automation.Tracing;
 using System.Threading;
 

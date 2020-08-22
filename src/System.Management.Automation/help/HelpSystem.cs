@@ -8,8 +8,6 @@ using System.Globalization;
 using System.Management.Automation.Language;
 
 using Microsoft.PowerShell.Commands;
-
-using System.Management.Automation.Runspaces;
 using System.Management.Automation.Internal;
 
 namespace System.Management.Automation

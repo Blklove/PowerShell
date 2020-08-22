@@ -15,7 +15,6 @@ using System.Threading.Tasks;
 using Dbg = System.Management.Automation.Diagnostics;
 using ConsoleHandle = Microsoft.Win32.SafeHandles.SafeFileHandle;
 using WORD = System.UInt16;
-using DWORD = System.UInt32;
 
 namespace Microsoft.PowerShell
 {

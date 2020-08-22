@@ -1,8 +1,6 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-using Dbg = System.Management.Automation.Diagnostics;
-
 namespace System.Management.Automation.Internal
 {
     /// <summary>

@@ -12,7 +12,6 @@
 --********************************************************************/
 
 using System.Management.Automation.Language;
-using Dbg = System.Management.Automation.Diagnostics;
 
 namespace System.Management.Automation
 {

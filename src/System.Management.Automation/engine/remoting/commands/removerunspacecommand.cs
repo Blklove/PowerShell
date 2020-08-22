@@ -10,8 +10,6 @@ using System.Management.Automation.Remoting;
 using System.Management.Automation.Runspaces;
 using System.Diagnostics.CodeAnalysis;
 
-using Dbg = System.Management.Automation.Diagnostics;
-
 namespace Microsoft.PowerShell.Commands
 {
     /// <summary>

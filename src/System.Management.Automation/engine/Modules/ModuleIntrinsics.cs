@@ -12,7 +12,6 @@ using System.Text;
 using System.Threading;
 
 using Microsoft.PowerShell.Commands;
-using Microsoft.Win32;
 
 using Dbg = System.Management.Automation.Diagnostics;
 

@@ -2,7 +2,6 @@
 // Licensed under the MIT License.
 
 using System.Collections.Generic;
-using System.Threading;
 
 using Dbg = System.Management.Automation.Diagnostics;
 

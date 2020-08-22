@@ -9,8 +9,6 @@ using System.Management.Automation.Runspaces;
 using System.Management.Automation.Runspaces.Internal;
 using System.Threading;
 
-using Dbg = System.Management.Automation.Diagnostics;
-
 #pragma warning disable 1634, 1691 // Stops compiler from warning about unknown warnings
 
 namespace System.Management.Automation

@@ -11,10 +11,6 @@ using System.Management.Automation.Tracing;
 using System.Security.Principal;
 #endif
 using System.Threading;
-using Microsoft.PowerShell.Commands;
-using Microsoft.Win32;
-
-using Dbg = System.Management.Automation.Diagnostics;
 
 namespace System.Management.Automation.Runspaces
 {

@@ -7,7 +7,6 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Management.Automation.Internal;
 using System.Management.Automation.Language;
-using System.Reflection;
 
 using PipelineResultTypes = System.Management.Automation.Runspaces.PipelineResultTypes;
 

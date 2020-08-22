@@ -9,8 +9,6 @@ using System.Text.RegularExpressions;
 
 using Microsoft.PowerShell;
 
-using Dbg = System.Management.Automation.Diagnostics;
-
 namespace System.Management.Automation
 {
     /// <summary>

@@ -9,7 +9,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
 using System.IO;
-using System.Management.Automation;
 using System.Text.RegularExpressions;
 using System.Threading;
 
