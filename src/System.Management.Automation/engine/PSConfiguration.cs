@@ -3,6 +3,9 @@
 
 using System.Collections.Generic;
 using System.IO;
+#if UNIX
+using System.Management.Automation.Internal;
+#endif
 using System.Text;
 using System.Threading;
 
