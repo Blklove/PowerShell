@@ -186,15 +186,15 @@ namespace Microsoft.PowerShell.Commands
                 ValueFromPipelineByPropertyName = false,
                 HelpMessageBaseName = "GetEventResources",
                 HelpMessageResourceId = "MaxEventsParamHelp")]
-        [ValidateRange((Int64)1, Int64.MaxValue)]
-        public Int64 MaxEvents
+        [ValidateRange((long)1, long.MaxValue)]
+        public long MaxEvents
         {
             get { return _maxEvents; }
 
             set { _maxEvents = value; }
         }
 
-        private Int64 _maxEvents = -1;
+        private long _maxEvents = -1;
 
         /// <summary>
         /// ComputerName parameter.
@@ -875,7 +875,7 @@ namespace Microsoft.PowerShell.Commands
         {
             using (EventLogReader readerObj = new EventLogReader(logQuery))
             {
-                Int64 numEvents = 0;
+                long numEvents = 0;
                 EventRecord evtObj = null;
 
                 while (true)
@@ -1409,8 +1409,8 @@ namespace Microsoft.PowerShell.Commands
         //
         private string HandleKeywordHashValue(object value)
         {
-            Int64 keywordsMask = 0;
-            Int64 keywordLong = 0;
+            long keywordsMask = 0;
+            long keywordLong = 0;
 
             Array keywordArray = value as Array;
             if (keywordArray != null)
@@ -1707,7 +1707,7 @@ namespace Microsoft.PowerShell.Commands
         // Returns true and keyLong ref if successful.
         // Writes an error and returns false if keyString cannot be converted.
         //
-        private bool KeywordStringToInt64(string keyString, ref Int64 keyLong)
+        private bool KeywordStringToInt64(string keyString, ref long keyLong)
         {
             try
             {

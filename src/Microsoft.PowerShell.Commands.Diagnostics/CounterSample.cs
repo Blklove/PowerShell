@@ -23,15 +23,15 @@ namespace Microsoft.PowerShell.Commands.GetCounter
         internal PerformanceCounterSample(string path,
                                string instanceName,
                                double cookedValue,
-                               UInt64 rawValue,
-                               UInt64 secondValue,
+                               ulong rawValue,
+                               ulong secondValue,
                                uint multiCount,
                                PerformanceCounterType counterType,
-                               UInt32 defaultScale,
-                               UInt64 timeBase,
+                               uint defaultScale,
+                               ulong timeBase,
                                DateTime timeStamp,
-                               UInt64 timeStamp100nSec,
-                               UInt32 status)
+                               ulong timeStamp100nSec,
+                               uint status)
         {
             _path = path;
             _instanceName = instanceName;
@@ -74,23 +74,23 @@ namespace Microsoft.PowerShell.Commands.GetCounter
 
         private double _cookedValue = 0;
 
-        public UInt64 RawValue
+        public ulong RawValue
         {
             get { return _rawValue; }
 
             set { _rawValue = value; }
         }
 
-        private UInt64 _rawValue = 0;
+        private ulong _rawValue = 0;
 
-        public UInt64 SecondValue
+        public ulong SecondValue
         {
             get { return _secondValue; }
 
             set { _secondValue = value; }
         }
 
-        private UInt64 _secondValue = 0;
+        private ulong _secondValue = 0;
 
         public uint MultipleCount
         {
@@ -119,41 +119,41 @@ namespace Microsoft.PowerShell.Commands.GetCounter
 
         private DateTime _timeStamp = DateTime.MinValue;
 
-        public UInt64 Timestamp100NSec
+        public ulong Timestamp100NSec
         {
             get { return _timeStamp100nSec; }
 
             set { _timeStamp100nSec = value; }
         }
 
-        private UInt64 _timeStamp100nSec = 0;
+        private ulong _timeStamp100nSec = 0;
 
-        public UInt32 Status
+        public uint Status
         {
             get { return _status; }
 
             set { _status = value; }
         }
 
-        private UInt32 _status = 0;
+        private uint _status = 0;
 
-        public UInt32 DefaultScale
+        public uint DefaultScale
         {
             get { return _defaultScale; }
 
             set { _defaultScale = value; }
         }
 
-        private UInt32 _defaultScale = 0;
+        private uint _defaultScale = 0;
 
-        public UInt64 TimeBase
+        public ulong TimeBase
         {
             get { return _timeBase; }
 
             set { _timeBase = value; }
         }
 
-        private UInt64 _timeBase = 0;
+        private ulong _timeBase = 0;
     }
 
     public class PerformanceCounterSampleSet
