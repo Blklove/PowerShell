@@ -385,7 +385,8 @@ dotnet_diagnostic.CA2201.severity = silent
 dotnet_diagnostic.CA2207.severity = none
 
 # CA2208: Instantiate argument exceptions correctly
-dotnet_diagnostic.CA2208.severity = suggestion
+dotnet_diagnostic.CA2208.severity = warning
+dotnet_code_quality.ca2208.api_surface = all
 
 # CA2211: Non-constant fields should not be visible
 dotnet_diagnostic.CA2211.severity = suggestion
