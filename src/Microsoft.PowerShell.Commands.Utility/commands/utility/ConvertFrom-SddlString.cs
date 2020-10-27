@@ -43,7 +43,7 @@ namespace Microsoft.PowerShell.Commands
         }
 
         private AccessRightTypeNames _type;
-        private bool _isTypeSet = false;
+        private bool _isTypeSet;
 
         private string ConvertToNTAccount(SecurityIdentifier securityIdentifier)
         {

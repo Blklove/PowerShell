@@ -1007,7 +1007,7 @@ namespace System.Management.Automation
 
         #region Sequence Id Generator
 
-        private static int s_nextSequenceNumber = 0;
+        private static int s_nextSequenceNumber;
 
         /// <summary>
         /// Generate next sequence id to be attached to current event.
@@ -1052,7 +1052,7 @@ namespace System.Management.Automation
     /// </summary>
     internal class LogContextCache
     {
-        internal string User { get; set; } = null;
+        internal string User { get; set; }
     }
 
     #region Command State and Provider State

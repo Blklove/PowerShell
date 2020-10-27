@@ -25,7 +25,7 @@ namespace Microsoft.PowerShell.Commands
         #region Data
 
         private Stream _originalStreamToProxy;
-        private bool _isInitialized = false;
+        private bool _isInitialized;
         private Cmdlet _ownerCmdlet;
 
         #endregion

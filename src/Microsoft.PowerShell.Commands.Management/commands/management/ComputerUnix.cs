@@ -95,10 +95,10 @@ namespace Microsoft.PowerShell.Commands
     public class CommandLineCmdletBase : PSCmdlet, IDisposable
     {
 #region Private Members
-        private Process _process = null;
-#endregion
+        private Process _process;
+        #endregion
 
-#region "IDisposable Members"
+        #region "IDisposable Members"
 
         /// <summary>
         /// Dispose Method.

@@ -162,7 +162,7 @@ namespace Microsoft.PowerShell.Cmdletization.Cim
         private static readonly Random s_globalRandom = new Random();
         private readonly Random _random;
         private int _sleepAndRetryDelayRangeMs = 1000;
-        private int _sleepAndRetryExtraDelayMs = 0;
+        private int _sleepAndRetryExtraDelayMs;
 
         private const int MaxRetryDelayMs = 15 * 1000;
         private const int MinRetryDelayMs = 100;

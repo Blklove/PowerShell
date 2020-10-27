@@ -32,7 +32,7 @@ namespace Microsoft.PowerShell.Commands
             }
         }
 
-        private PSObject _inputObject = null;
+        private PSObject _inputObject;
 
         /// <summary>
         /// The event name to subscribe.
@@ -51,7 +51,7 @@ namespace Microsoft.PowerShell.Commands
             }
         }
 
-        private string _eventName = null;
+        private string _eventName;
 
         #endregion parameters
 

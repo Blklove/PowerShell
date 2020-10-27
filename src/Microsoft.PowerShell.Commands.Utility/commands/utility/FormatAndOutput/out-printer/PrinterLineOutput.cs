@@ -266,7 +266,7 @@ namespace Microsoft.PowerShell.Commands.Internal.Format
         /// <summary>
         /// Flag for one-time initialization of the interface (columns, etc.).
         /// </summary>
-        private bool _printingInitialized = false;
+        private bool _printingInitialized;
 
         /// <summary>
         /// Callback to ask the outputter to playback its cache.
@@ -276,17 +276,17 @@ namespace Microsoft.PowerShell.Commands.Internal.Format
         /// <summary>
         /// Name of the printer to print to. Null means default printer.
         /// </summary>
-        private string _printerName = null;
+        private string _printerName;
 
         /// <summary>
         /// Name of the font to use, if null the default is used.
         /// </summary>
-        private string _printFontName = null;
+        private string _printFontName;
 
         /// <summary>
         /// Font size.
         /// </summary>
-        private int _printFontSize = 0;
+        private int _printFontSize;
 
         /// <summary>
         /// Default font, used if the printFont is not specified or if the
@@ -320,7 +320,7 @@ namespace Microsoft.PowerShell.Commands.Internal.Format
         /// <summary>
         /// Cached font object.
         /// </summary>
-        private Font _printFont = null;
+        private Font _printFont;
 
         private WriteLineHelper _writeLineHelper;
     }

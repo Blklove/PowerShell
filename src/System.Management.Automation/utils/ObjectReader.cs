@@ -66,7 +66,7 @@ namespace System.Management.Automation.Internal
             }
         }
 
-        public event EventHandler InternalDataReady = null;
+        public event EventHandler InternalDataReady;
 
         #endregion Events
 

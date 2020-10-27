@@ -709,7 +709,7 @@ namespace System.Management.Automation
             get { return _swallowException; }
         }
 
-        private readonly bool _swallowException = false;
+        private readonly bool _swallowException;
 
         #endregion Property
     }

@@ -69,8 +69,8 @@ namespace System.Management.Automation.Security
         }
 
         private static object s_systemLockdownPolicyLock = new object();
-        private static SystemEnforcementMode? s_systemLockdownPolicy = null;
-        private static bool s_allowDebugOverridePolicy = false;
+        private static SystemEnforcementMode? s_systemLockdownPolicy;
+        private static bool s_allowDebugOverridePolicy;
 
         /// <summary>
         /// Gets lockdown policy as applied to a file.
@@ -178,7 +178,7 @@ namespace System.Management.Automation.Security
             }
         }
 
-        private static SystemEnforcementMode? s_cachedWldpSystemPolicy = null;
+        private static SystemEnforcementMode? s_cachedWldpSystemPolicy;
 
         private const string AppLockerTestFileName = "__PSScriptPolicyTest_";
         private const string AppLockerTestFileContents = "# PowerShell test file to determine AppLocker lockdown mode ";
@@ -314,7 +314,7 @@ namespace System.Management.Automation.Security
             }
         }
 
-        private static SaferPolicy? s_cachedSaferSystemPolicy = null;
+        private static SaferPolicy? s_cachedSaferSystemPolicy;
 
         private static string GetKnownFolderPath(Guid knownFolderId)
         {
@@ -380,7 +380,7 @@ namespace System.Management.Automation.Security
             return SystemEnforcementMode.None;
         }
 
-        private static bool s_hadMissingWldpAssembly = false;
+        private static bool s_hadMissingWldpAssembly;
 
         /// <summary>
         /// Gets lockdown policy as applied to a COM object.

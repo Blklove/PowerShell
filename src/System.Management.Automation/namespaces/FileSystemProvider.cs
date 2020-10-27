@@ -88,7 +88,7 @@ namespace Microsoft.PowerShell.Commands
         {
         }
 
-        private Collection<WildcardPattern> _excludeMatcher = null;
+        private Collection<WildcardPattern> _excludeMatcher;
 
         private static System.IO.EnumerationOptions _enumerationOptions = new System.IO.EnumerationOptions
         {
@@ -7691,7 +7691,7 @@ namespace Microsoft.PowerShell.Commands
             }
         }
 
-        private bool _suppressNewline = false;
+        private bool _suppressNewline;
     }
 
     /// <summary>

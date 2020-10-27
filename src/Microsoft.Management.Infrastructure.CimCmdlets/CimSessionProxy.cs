@@ -187,7 +187,7 @@ namespace Microsoft.Management.Infrastructure.CimCmdlets
         /// global operation counter
         /// </para>
         /// </summary>
-        private static long gOperationCounter = 0;
+        private static long gOperationCounter;
 
         /// <summary>
         /// Temporary CimSession cache lock.
@@ -1501,7 +1501,7 @@ namespace Microsoft.Management.Infrastructure.CimCmdlets
             }
         }
 
-        private CimInstance targetCimInstance = null;
+        private CimInstance targetCimInstance;
 
         /// <summary>
         /// Flag controls whether session object should be closed or not.
@@ -1571,7 +1571,7 @@ namespace Microsoft.Management.Infrastructure.CimCmdlets
         /// <summary>
         /// CancelOperation disposed flag.
         /// </summary>
-        private int _cancelOperationDisposed = 0;
+        private int _cancelOperationDisposed;
 
         /// <summary>
         /// Dispose the cancel operation.
@@ -2253,7 +2253,7 @@ namespace Microsoft.Management.Infrastructure.CimCmdlets
 
         #region private members
 
-        private CimNewCimInstance newCimInstance = null;
+        private CimNewCimInstance newCimInstance;
 
         internal CimNewCimInstance NewCimInstanceOperation
         {
@@ -2343,7 +2343,7 @@ namespace Microsoft.Management.Infrastructure.CimCmdlets
         /// <summary>
         /// Ture indicates need to output the modified result.
         /// </summary>
-        private bool passThru = false;
+        private bool passThru;
 
         #endregion
     }

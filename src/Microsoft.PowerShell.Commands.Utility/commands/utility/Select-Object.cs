@@ -126,7 +126,7 @@ namespace Microsoft.PowerShell.Commands
             set { _last = value; _firstOrLastSpecified = true; }
         }
 
-        private int _last = 0;
+        private int _last;
 
         /// <summary>
         /// </summary>
@@ -142,7 +142,7 @@ namespace Microsoft.PowerShell.Commands
             set { _first = value; _firstOrLastSpecified = true; }
         }
 
-        private int _first = 0;
+        private int _first;
         private bool _firstOrLastSpecified;
 
         /// <summary>
@@ -333,7 +333,7 @@ namespace Microsoft.PowerShell.Commands
             internal int NotePropertyCount { get; }
         }
 
-        private List<UniquePSObjectHelper> _uniques = null;
+        private List<UniquePSObjectHelper> _uniques;
 
         private void ProcessExpressionParameter()
         {

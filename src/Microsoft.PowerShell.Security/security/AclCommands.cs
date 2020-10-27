@@ -656,7 +656,7 @@ namespace Microsoft.PowerShell.Commands
             }
         }
 
-        private PSObject _inputObject = null;
+        private PSObject _inputObject;
 
         /// <summary>
         /// InputObject Parameter
@@ -698,7 +698,7 @@ namespace Microsoft.PowerShell.Commands
             }
         }
 
-        private bool _isLiteralPath = false;
+        private bool _isLiteralPath;
 
         /// <summary>
         /// Gets or sets the audit flag of the command.  This flag
@@ -924,7 +924,7 @@ namespace Microsoft.PowerShell.Commands
             }
         }
 
-        private PSObject _inputObject = null;
+        private PSObject _inputObject;
 
         /// <summary>
         /// InputObject Parameter
@@ -965,7 +965,7 @@ namespace Microsoft.PowerShell.Commands
             }
         }
 
-        private bool _isLiteralPath = false;
+        private bool _isLiteralPath;
 
         private object _securityDescriptor;
 

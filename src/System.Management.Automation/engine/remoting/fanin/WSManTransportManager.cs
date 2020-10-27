@@ -499,8 +499,8 @@ namespace System.Management.Automation.Remoting.Client
 
         #region SHIM: Redirection delegates for test purposes
 
-        private static Delegate s_sessionSendRedirect = null;
-        private static Delegate s_protocolVersionRedirect = null;
+        private static Delegate s_sessionSendRedirect;
+        private static Delegate s_protocolVersionRedirect;
 
         #endregion
 
@@ -2945,7 +2945,7 @@ namespace System.Management.Automation.Remoting.Client
 
         #region SHIM: Redirection delegate for command code send.
 
-        private static Delegate s_commandCodeSendRedirect = null;
+        private static Delegate s_commandCodeSendRedirect;
 
         #endregion
 
@@ -3991,7 +3991,7 @@ namespace System.Management.Automation.Remoting.Client
 
         #region SHIM: Redirection delegate for command data send.
 
-        private static Delegate s_commandSendRedirect = null;
+        private static Delegate s_commandSendRedirect;
 
         #endregion
 

@@ -154,7 +154,7 @@ namespace Microsoft.PowerShell.Commands
             set { _allowRedirection = value; }
         }
 
-        private bool _allowRedirection = false;
+        private bool _allowRedirection;
 
         /// <summary>
         /// RemoteRunspaceId to retrieve corresponding PSSession

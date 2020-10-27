@@ -34,7 +34,7 @@ namespace Microsoft.PowerShell.Commands
             }
         }
 
-        private string _sourceIdentifier = null;
+        private string _sourceIdentifier;
 
         /// <summary>
         /// If timeout is specified, the cmdlet will only wait for this number of seconds.
@@ -61,7 +61,7 @@ namespace Microsoft.PowerShell.Commands
         #endregion parameters
 
         private AutoResetEvent _eventArrived = new AutoResetEvent(false);
-        private PSEventArgs _receivedEvent = null;
+        private PSEventArgs _receivedEvent;
         private object _receivedEventLock = new object();
         private WildcardPattern _matchPattern;
 

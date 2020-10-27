@@ -46,7 +46,7 @@ namespace Microsoft.Management.Infrastructure.CimCmdlets
             }
         }
 
-        private readonly string parameterSetName = null;
+        private readonly string parameterSetName;
 
         /// <summary>
         /// Whether the parameter is mandatory to the set.
@@ -59,7 +59,7 @@ namespace Microsoft.Management.Infrastructure.CimCmdlets
             }
         }
 
-        private readonly bool mandatory = false;
+        private readonly bool mandatory;
     }
 
     /// <summary>
@@ -123,7 +123,7 @@ namespace Microsoft.Management.Infrastructure.CimCmdlets
             }
         }
 
-        private readonly bool isDefaultParameterSet = false;
+        private readonly bool isDefaultParameterSet;
 
         /// <summary>
         /// Property <c>MandatoryParameterCount</c>
@@ -136,7 +136,7 @@ namespace Microsoft.Management.Infrastructure.CimCmdlets
             }
         }
 
-        private readonly UInt32 mandatoryParameterCount = 0;
+        private readonly UInt32 mandatoryParameterCount;
 
         /// <summary>
         /// Property <c>IsValueSet</c>
@@ -154,7 +154,7 @@ namespace Microsoft.Management.Infrastructure.CimCmdlets
             }
         }
 
-        private bool isValueSet = false;
+        private bool isValueSet;
 
         /// <summary>
         /// Property <c>IsValueSetAtBeginProcess</c>
@@ -172,7 +172,7 @@ namespace Microsoft.Management.Infrastructure.CimCmdlets
             }
         }
 
-        private bool isValueSetAtBeginProcess = false;
+        private bool isValueSetAtBeginProcess;
 
         /// <summary>
         /// Property <c>SetMandatoryParameterCount</c>
@@ -190,7 +190,7 @@ namespace Microsoft.Management.Infrastructure.CimCmdlets
             }
         }
 
-        private UInt32 setMandatoryParameterCount = 0;
+        private UInt32 setMandatoryParameterCount;
 
         /// <summary>
         /// Property <c>SetMandatoryParameterCountAtBeginProcess</c>
@@ -208,7 +208,7 @@ namespace Microsoft.Management.Infrastructure.CimCmdlets
             }
         }
 
-        private UInt32 setMandatoryParameterCountAtBeginProcess = 0;
+        private UInt32 setMandatoryParameterCountAtBeginProcess;
     }
 
     /// <summary>

@@ -418,7 +418,7 @@ namespace System.Management.Automation
         }
 
 #if !UNIX
-        private static string s_pshome = null;
+        private static string s_pshome;
 
         /// <summary>
         /// Get the application base path of the shell from registry.
@@ -448,7 +448,7 @@ namespace System.Management.Automation
             return null;
         }
 
-        private static string s_windowsPowerShellVersion = null;
+        private static string s_windowsPowerShellVersion;
 
         /// <summary>
         /// Get the Windows PowerShell version from registry.

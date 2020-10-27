@@ -190,7 +190,7 @@ namespace Microsoft.PowerShell.Commands
         /// The ServiceName parameter is declared in subclasses,
         /// since it is optional for GetService and mandatory otherwise.
         /// </remarks>
-        internal string[] serviceNames = null;
+        internal string[] serviceNames;
 
         /// <summary>
         /// Gets/sets an array of display names for services.
@@ -210,7 +210,7 @@ namespace Microsoft.PowerShell.Commands
             }
         }
 
-        internal string[] displayNames = null;
+        internal string[] displayNames;
 
         /// <summary>
         /// Lets you include particular services.  Services not matching
@@ -233,7 +233,7 @@ namespace Microsoft.PowerShell.Commands
             }
         }
 
-        internal string[] include = null;
+        internal string[] include;
 
         /// <summary>
         /// Lets you exclude particular services.  Services matching
@@ -256,7 +256,7 @@ namespace Microsoft.PowerShell.Commands
             }
         }
 
-        internal string[] exclude = null;
+        internal string[] exclude;
 
         // 1054295-2004/12/01-JonN This also works around 1054295.
         /// <summary>
@@ -285,7 +285,7 @@ namespace Microsoft.PowerShell.Commands
             }
         }
 
-        private ServiceController[] _inputObject = null;
+        private ServiceController[] _inputObject;
         #endregion Parameters
 
         #region Internal
@@ -312,7 +312,7 @@ namespace Microsoft.PowerShell.Commands
             }
         }
 
-        private ServiceController[] _allServices = null;
+        private ServiceController[] _allServices;
 
         internal ServiceController GetOneService(string nameOfService)
         {
@@ -1504,7 +1504,7 @@ namespace Microsoft.PowerShell.Commands
             }
         }
 
-        internal string serviceName = null;
+        internal string serviceName;
 
         /// <summary>
         /// The following is the definition of the input parameter "InputObject".
@@ -1532,7 +1532,7 @@ namespace Microsoft.PowerShell.Commands
             }
         }
 
-        internal string displayName = null;
+        internal string displayName;
 
         /// <summary>
         /// Account under which the service should run.
@@ -1561,7 +1561,7 @@ namespace Microsoft.PowerShell.Commands
             }
         }
 
-        internal string description = null;
+        internal string description;
 
         /// <summary>
         /// The following is the definition of the input parameter "StartupType".
@@ -1620,7 +1620,7 @@ namespace Microsoft.PowerShell.Commands
             }
         }
 
-        internal string serviceStatus = null;
+        internal string serviceStatus;
 
         /// <summary>
         /// The following is the definition of the input parameter "Force".
@@ -1649,7 +1649,7 @@ namespace Microsoft.PowerShell.Commands
             }
         }
 
-        internal new string[] include = null;
+        internal new string[] include;
 
         /// <summary>
         /// This is not a parameter for this cmdlet.
@@ -1669,7 +1669,7 @@ namespace Microsoft.PowerShell.Commands
             }
         }
 
-        internal new string[] exclude = null;
+        internal new string[] exclude;
         #endregion Parameters
 
         #region Overrides
@@ -1999,7 +1999,7 @@ namespace Microsoft.PowerShell.Commands
             set { serviceName = value; }
         }
 
-        internal string serviceName = null;
+        internal string serviceName;
 
         /// <summary>
         /// The executable which implements this service.
@@ -2014,7 +2014,7 @@ namespace Microsoft.PowerShell.Commands
             set { binaryPathName = value; }
         }
 
-        internal string binaryPathName = null;
+        internal string binaryPathName;
 
         /// <summary>
         /// DisplayName of the service to create.
@@ -2029,7 +2029,7 @@ namespace Microsoft.PowerShell.Commands
             set { displayName = value; }
         }
 
-        internal string displayName = null;
+        internal string displayName;
 
         /// <summary>
         /// Description of the service to create.
@@ -2044,7 +2044,7 @@ namespace Microsoft.PowerShell.Commands
             set { description = value; }
         }
 
-        internal string description = null;
+        internal string description;
 
         /// <summary>
         /// Should the service start automatically?
@@ -2073,7 +2073,7 @@ namespace Microsoft.PowerShell.Commands
             set { credential = value; }
         }
 
-        internal PSCredential credential = null;
+        internal PSCredential credential;
 
         /// <summary>
         /// Sets the SecurityDescriptorSddl of the service using a SDDL string.
@@ -2099,7 +2099,7 @@ namespace Microsoft.PowerShell.Commands
             set { dependsOn = value; }
         }
 
-        internal string[] dependsOn = null;
+        internal string[] dependsOn;
         #endregion Parameters
 
         #region Overrides

@@ -16,7 +16,7 @@ namespace System.Management.Automation
     /// </summary>
     public static class Platform
     {
-        private static string _tempDirectory = null;
+        private static string _tempDirectory;
 
         /// <summary>
         /// True if the current platform is Linux.
@@ -149,9 +149,9 @@ namespace System.Management.Automation
         internal static readonly string CacheDirectory = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Microsoft\PowerShell";
         internal static readonly string ConfigDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal) + @"\PowerShell";
 
-        private static bool? _isNanoServer = null;
-        private static bool? _isIoT = null;
-        private static bool? _isWindowsDesktop = null;
+        private static bool? _isNanoServer;
+        private static bool? _isIoT;
+        private static bool? _isWindowsDesktop;
 #endif
 
         // format files
@@ -239,7 +239,7 @@ namespace System.Management.Automation
             DEFAULT
         }
 
-        private static string s_tempHomeDir = null;
+        private static string s_tempHomeDir;
 
         /// <summary>
         /// Function for choosing directory location of PowerShell for profile loading.

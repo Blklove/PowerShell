@@ -171,7 +171,7 @@ namespace Microsoft.PowerShell.Commands
         }
 
         private string _path;
-        private bool _specifiedPath = false;
+        private bool _specifiedPath;
 
         /// <summary>
         /// The literal path of the mandatory file name to write to.
@@ -194,7 +194,7 @@ namespace Microsoft.PowerShell.Commands
             }
         }
 
-        private bool _isLiteralPath = false;
+        private bool _isLiteralPath;
 
         /// <summary>
         /// Gets or sets property that sets force parameter.
@@ -338,12 +338,12 @@ namespace Microsoft.PowerShell.Commands
         /// <summary>
         /// Stream writer used to write to file.
         /// </summary>
-        private StreamWriter _sw = null;
+        private StreamWriter _sw;
 
         /// <summary>
         /// Handle to file whose read-only attribute should be reset when we are done.
         /// </summary>
-        private FileInfo _readOnlyFileInfo = null;
+        private FileInfo _readOnlyFileInfo;
 
         private void CreateFileStream()
         {
@@ -556,7 +556,7 @@ namespace Microsoft.PowerShell.Commands
         }
 
         private string[] _paths;
-        private bool _specifiedPath = false;
+        private bool _specifiedPath;
 
         /// <summary>
         /// Gets or sets the literal path of the mandatory file name to read from.
@@ -580,7 +580,7 @@ namespace Microsoft.PowerShell.Commands
             }
         }
 
-        private bool _isLiteralPath = false;
+        private bool _isLiteralPath;
 
         /// <summary>
         /// Gets or sets property that sets UseCulture parameter.
@@ -624,7 +624,7 @@ namespace Microsoft.PowerShell.Commands
         /// <summary>
         /// Avoid writing out duplicate warning messages when there are one or more unspecified names.
         /// </summary>
-        private bool _alreadyWarnedUnspecifiedNames = false;
+        private bool _alreadyWarnedUnspecifiedNames;
 
         #endregion Command Line Parameters
 
@@ -814,7 +814,7 @@ namespace Microsoft.PowerShell.Commands
         /// <summary>
         /// Avoid writing out duplicate warning messages when there are one or more unspecified names.
         /// </summary>
-        private bool _alreadyWarnedUnspecifiedNames = false;
+        private bool _alreadyWarnedUnspecifiedNames;
 
         #endregion Command Line Parameters
 
@@ -1211,7 +1211,7 @@ namespace Microsoft.PowerShell.Commands
         /// <summary>
         /// Avoid writing out duplicate warning messages when there are one or more unspecified names.
         /// </summary>
-        private bool _alreadyWarnedUnspecifiedName = false;
+        private bool _alreadyWarnedUnspecifiedName;
 
         /// <summary>
         /// Gets reference to header values.

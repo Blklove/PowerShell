@@ -258,13 +258,13 @@ namespace Microsoft.PowerShell.Commands.Internal.Format
         /// Instance of the delegate previously defined
         /// for line that has EXACTLY this.ncols characters.
         /// </summary>
-        private WriteCallback _writeCall = null;
+        private WriteCallback _writeCall;
 
         /// <summary>
         /// Instance of the delegate previously defined
         /// for generic line, less that this.ncols characters.
         /// </summary>
-        private WriteCallback _writeLineCall = null;
+        private WriteCallback _writeLineCall;
 
         #endregion
 
@@ -447,11 +447,11 @@ namespace Microsoft.PowerShell.Commands.Internal.Format
             _suppressNewline = suppressNewline;
         }
 
-        private int _columns = 0;
+        private int _columns;
 
-        private TextWriter _writer = null;
+        private TextWriter _writer;
 
-        private bool _suppressNewline = false;
+        private bool _suppressNewline;
     }
 
     /// <summary>
@@ -499,6 +499,6 @@ namespace Microsoft.PowerShell.Commands.Internal.Format
         /// <summary>
         /// Instance of the delegate previously defined.
         /// </summary>
-        private WriteLineCallback _writeCall = null;
+        private WriteLineCallback _writeCall;
     }
 }

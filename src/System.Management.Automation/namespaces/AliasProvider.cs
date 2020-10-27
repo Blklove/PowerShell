@@ -351,7 +351,7 @@ namespace Microsoft.PowerShell.Commands
             get { return _optionsSet; }
         }
 
-        private bool _optionsSet = false;
+        private bool _optionsSet;
     }
 }
 

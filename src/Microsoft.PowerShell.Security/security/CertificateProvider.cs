@@ -50,7 +50,7 @@ namespace Microsoft.PowerShell.Commands
             set { _codeSigningCert = value; }
         }
 
-        private SwitchParameter _codeSigningCert = new SwitchParameter();
+        private SwitchParameter _codeSigningCert;
 
         /// <summary>
         /// Gets or sets a filter that controls whether we only return
@@ -249,7 +249,7 @@ namespace Microsoft.PowerShell.Commands
             }
         }
 
-        private SwitchParameter _deleteKey = new SwitchParameter();
+        private SwitchParameter _deleteKey;
     }
 
     /// <summary>
@@ -510,12 +510,12 @@ namespace Microsoft.PowerShell.Commands
             }
         }
 
-        private bool _archivedCerts = false;
-        private X509StoreLocation _storeLocation = null;
-        private string _storeName = null;
-        private CertificateStoreHandle _storeHandle = null;
-        private bool _valid = false;
-        private bool _open = false;
+        private bool _archivedCerts;
+        private X509StoreLocation _storeLocation;
+        private string _storeName;
+        private CertificateStoreHandle _storeHandle;
+        private bool _valid;
+        private bool _open;
     }
 
     /// <summary>
@@ -574,7 +574,7 @@ namespace Microsoft.PowerShell.Commands
         /// <summary>
         /// Indicate if we already have attempted to load the PKI module.
         /// </summary>
-        private bool _hasAttemptedToLoadPkiModule = false;
+        private bool _hasAttemptedToLoadPkiModule;
 
         /// <summary>
         /// Lock that guards access to the following static members
@@ -588,7 +588,7 @@ namespace Microsoft.PowerShell.Commands
         ///
         /// Synchronized on staticLock.
         /// </summary>
-        private static List<X509StoreLocation> s_storeLocations = null;
+        private static List<X509StoreLocation> s_storeLocations;
 
         /// <summary>
         /// Cache that stores paths and their associated objects.
@@ -598,7 +598,7 @@ namespace Microsoft.PowerShell.Commands
         ///
         /// Synchronized on staticLock.
         /// </summary>
-        private static Hashtable s_pathCache = null;
+        private static Hashtable s_pathCache;
 
         /// <summary>
         /// We allow either / or \ to be the path separator.
@@ -613,7 +613,7 @@ namespace Microsoft.PowerShell.Commands
         /// <summary>
         /// Cache the store handle to avoid repeated CertOpenStore calls.
         /// </summary>
-        private static X509NativeStore s_storeCache = null;
+        private static X509NativeStore s_storeCache;
 
         /// <summary>
         /// On demand create the Regex to avoid a hit to startup perf.
@@ -624,7 +624,7 @@ namespace Microsoft.PowerShell.Commands
         /// have any deadlocks due to other locked static members calling
         /// this property.
         /// </remarks>
-        private static Regex s_certPathRegex = null;
+        private static Regex s_certPathRegex;
 
         private static Regex CertPathRegex
         {
@@ -3434,8 +3434,8 @@ namespace Microsoft.PowerShell.Commands
     /// </summary>
     internal static class DownLevelHelper
     {
-        private static bool s_isWin8Set = false;
-        private static bool s_isWin8 = false;
+        private static bool s_isWin8Set;
+        private static bool s_isWin8;
 
         internal static bool IsWin8AndAbove()
         {

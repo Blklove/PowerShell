@@ -21,7 +21,7 @@ namespace System.Management.Automation.Internal
     /// </summary>
     internal class ClientRunspacePoolDataStructureHandler : IDisposable
     {
-        private bool _reconnecting = false;
+        private bool _reconnecting;
 
         #region Constructors
 
@@ -864,7 +864,7 @@ namespace System.Management.Automation.Internal
 
         private Guid _clientRunspacePoolId;
         private object _syncObject = new object();
-        private bool _createRunspaceCalled = false;
+        private bool _createRunspaceCalled;
         private Exception _closingReason;
         private int _minRunspaces;
         private int _maxRunspaces;

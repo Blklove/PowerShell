@@ -175,7 +175,7 @@ namespace Microsoft.PowerShell.Commands
         // Instantiate a new instance of MailMessage
         private MailMessage _mMailMessage = new MailMessage();
 
-        private SmtpClient _mSmtpClient = null;
+        private SmtpClient _mSmtpClient;
 
         /// <summary>
         /// Add the input addresses which are either string or hashtable to the MailMessage.

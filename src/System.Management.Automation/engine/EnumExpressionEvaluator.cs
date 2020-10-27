@@ -318,13 +318,13 @@ namespace System.Management.Automation
 
         #region private members
 
-        private Type _underType = null;
+        private Type _underType;
 
         #endregion
 
         #region properties
 
-        internal Node Root { get; set; } = null;
+        internal Node Root { get; set; }
 
         #endregion
 

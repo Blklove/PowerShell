@@ -1919,7 +1919,7 @@ else
         // SID for Interactive Users group.
         internal const string InteractiveUsersSID = "S-1-5-4";
 
-        internal Version MaxPSVersion = null;
+        internal Version MaxPSVersion;
 
         #endregion
 
@@ -2096,7 +2096,7 @@ else
         }
 
         private PSSessionConfigurationAccessMode _accessMode = PSSessionConfigurationAccessMode.Remote;
-        internal bool accessModeSpecified = false;
+        internal bool accessModeSpecified;
 
         /// <summary>
         /// Host mode.
@@ -2394,7 +2394,7 @@ else
         }
 
         internal object[] modulesToImport;
-        internal bool modulePathSpecified = false;
+        internal bool modulePathSpecified;
 
         /// <summary>
         /// Declaration initial session config file path.
@@ -2406,11 +2406,11 @@ else
         // Other helper variables that come along with the path
         /// <summary>
         /// </summary>
-        protected bool RunAsVirtualAccount { get; set; } = false;
+        protected bool RunAsVirtualAccount { get; set; }
 
         /// <summary>
         /// </summary>
-        protected bool RunAsVirtualAccountSpecified { get; set; } = false;
+        protected bool RunAsVirtualAccountSpecified { get; set; }
 
         /// <summary>
         /// Comma delimited string specifying groups a virtual account is associated with.

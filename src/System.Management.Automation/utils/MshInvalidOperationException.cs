@@ -138,7 +138,7 @@ namespace System.Management.Automation
         }
 
         private ErrorCategory _errorCategory = ErrorCategory.InvalidOperation;
-        private object _target = null;
+        private object _target;
     }
 }
 

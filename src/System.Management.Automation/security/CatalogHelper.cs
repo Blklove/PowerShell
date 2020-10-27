@@ -76,7 +76,7 @@ namespace System.Management.Automation
         // Hash Algorithms supported by Windows Catalog
         private static string HashAlgorithmSHA1 = "SHA1";
         private static string HashAlgorithmSHA256 = "SHA256";
-        private static PSCmdlet _cmdlet = null;
+        private static PSCmdlet _cmdlet;
 
         /// <summary>
         /// Find out the Version of Catalog by reading its Meta data. We can have either version 1 or version 2 catalog.
