@@ -479,10 +479,6 @@ namespace Microsoft.PowerShell.Commands
         #endregion TracerouteTest
 
         #region MTUSizeTest
-        [System.Diagnostics.CodeAnalysis.SuppressMessage(
-            "Usage",
-            "CA2208:Instantiate argument exceptions correctly",
-            Justification = "https://github.com/PowerShell/PowerShell/issues/13909")]
         private void ProcessMTUSize(string targetNameOrAddress)
         {
             PingReply? reply, replyResult = null;
@@ -583,7 +579,9 @@ namespace Microsoft.PowerShell.Commands
                 WriteObject(new PingMtuStatus(
                     Source,
                     resolvedTargetName,
+#pragma warning disable CA2208 // Instantiate argument exceptions correctly
                     replyResult ?? throw new ArgumentNullException(nameof(replyResult)),
+#pragma warning restore CA2208 // https://github.com/PowerShell/PowerShell/issues/13909
                     CurrentMTUSize));
             }
         }
