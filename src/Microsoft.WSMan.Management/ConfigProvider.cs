@@ -2410,7 +2410,7 @@ namespace Microsoft.WSMan.Management
         /// <param name="value"></param>
         /// <param name="host"></param>
         /// <returns></returns>
-        private string GetInputStringForCreate(string ResourceURI, Hashtable value, string host)
+        private static string GetInputStringForCreate(string ResourceURI, Hashtable value, string host)
         {
             string putstr = string.Empty;
             string nilns = string.Empty;
@@ -4684,7 +4684,7 @@ namespace Microsoft.WSMan.Management
 
         #region Plugin private functions
 
-        private void GenerateObjectNameAndKeys(Hashtable InputAttributes, string ResourceURI, string ContainerItem, out string ItemName, out string[] keys)
+        private static void GenerateObjectNameAndKeys(Hashtable InputAttributes, string ResourceURI, string ContainerItem, out string ItemName, out string[] keys)
         {
             StringBuilder sbHashKey = new StringBuilder();
             string keysColumns = string.Empty;
@@ -5293,7 +5293,7 @@ namespace Microsoft.WSMan.Management
             return sbvalues.ToString();
         }
 
-        private string ConstructSecurityXml(PSObject objinputparams, ArrayList securities, string strResourceIdentity)
+        private static string ConstructSecurityXml(PSObject objinputparams, ArrayList securities, string strResourceIdentity)
         {
             // <Security Uri="" ExactMatch="false" Sddl="O:NSG:BAD:P(A;;GA;;;BA)(A;;GR;;;ER)S:P(AU;FA;GA;;;WD)(AU;SA;GXGW;;;WD)"/>
             StringBuilder sbvalues = new StringBuilder(string.Empty);

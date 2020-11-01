@@ -368,7 +368,7 @@ namespace Microsoft.PowerShell
             return policyCheckPassed;
         }
 
-        private bool SetPolicyFromAuthenticodePrompt(string path, PSHost host, ref Exception reason, Signature signature)
+        private static bool SetPolicyFromAuthenticodePrompt(string path, PSHost host, ref Exception reason, Signature signature)
         {
             bool policyCheckPassed = false;
 

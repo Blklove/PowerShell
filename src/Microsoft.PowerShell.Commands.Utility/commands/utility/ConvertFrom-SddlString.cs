@@ -116,7 +116,7 @@ namespace Microsoft.PowerShell.Commands
             }
         }
 
-        private string[] ConvertAccessControlListToStrings(CommonAcl acl, AccessRightTypeNames? typeName)
+        private static string[] ConvertAccessControlListToStrings(CommonAcl acl, AccessRightTypeNames? typeName)
         {
             if (acl == null || acl.Count == 0)
             {

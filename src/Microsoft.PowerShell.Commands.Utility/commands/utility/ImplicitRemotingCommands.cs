@@ -2870,7 +2870,7 @@ function Get-PSImplicitRemotingClientSideParameters
                 /* 8 */ commandMetadata.WrappedAnyCmdlet);
         }
 
-        private void GenerateCommandProxy(TextWriter writer, IEnumerable<CommandMetadata> listOfCommandMetadata)
+        private static void GenerateCommandProxy(TextWriter writer, IEnumerable<CommandMetadata> listOfCommandMetadata)
         {
             if (writer == null)
             {
