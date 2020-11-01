@@ -1346,7 +1346,7 @@ namespace System.Management.Automation
             return GetMatchedResults(allNames, completionContext);
         }
 
-        private List<CompletionResult> GetResultForEnumPropertyValueOfDSCResource(
+        private static List<CompletionResult> GetResultForEnumPropertyValueOfDSCResource(
             CompletionContext completionContext,
             string stringToComplete,
             ref int replacementIndex,

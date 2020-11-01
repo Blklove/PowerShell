@@ -546,7 +546,7 @@ namespace Microsoft.PowerShell.Commands
         /// </summary>
         /// <param name="name">The Uri to quote.</param>
         /// <returns>The quoted AbsoluteUri.</returns>
-        private string QuoteName(Uri name)
+        private static string QuoteName(Uri name)
         {
             if (name == null)
                 return "''";
@@ -558,7 +558,7 @@ namespace Microsoft.PowerShell.Commands
         /// </summary>
         /// <param name="name">The Version object to quote.</param>
         /// <returns>The quoted Version string.</returns>
-        private string QuoteName(Version name)
+        private static string QuoteName(Version name)
         {
             if (name == null)
                 return "''";
@@ -572,7 +572,7 @@ namespace Microsoft.PowerShell.Commands
         /// <param name="names">The list to quote.</param>
         /// <param name="streamWriter">Streamwriter to get end of line character from.</param>
         /// <returns>The quoted list.</returns>
-        private string QuoteNames(IEnumerable names, StreamWriter streamWriter)
+        private static string QuoteNames(IEnumerable names, StreamWriter streamWriter)
         {
             if (names == null)
                 return "@()";
@@ -647,7 +647,7 @@ namespace Microsoft.PowerShell.Commands
         /// <param name="moduleSpecs">The list to quote.</param>
         /// <param name="streamWriter">Streamwriter to get end of line character from.</param>
         /// <returns>The quoted list.</returns>
-        private string QuoteModules(IEnumerable moduleSpecs, StreamWriter streamWriter)
+        private static string QuoteModules(IEnumerable moduleSpecs, StreamWriter streamWriter)
         {
             StringBuilder result = new StringBuilder();
             result.Append("@(");

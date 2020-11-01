@@ -1111,7 +1111,7 @@ namespace System.Management.Automation.Remoting
         /// </summary>
         /// <param name="senderDetails"></param>
         /// <returns></returns>
-        private PSSenderInfo GetPSSenderInfo(
+        private static PSSenderInfo GetPSSenderInfo(
             WSManNativeApi.WSManSenderDetails senderDetails)
         {
             // senderDetails will not be null.

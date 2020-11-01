@@ -517,7 +517,7 @@ namespace System.Management.Automation.Language
             throw new Exception();
         }
 
-        private object GetIndexedValueFromTarget(object target, object index)
+        private static object GetIndexedValueFromTarget(object target, object index)
         {
             var indexArray = index as object[];
             return indexArray != null ? ((object[])indexArray).Select(i => GetSingleValueFromTarget(target, i)).ToArray() : GetSingleValueFromTarget(target, index);

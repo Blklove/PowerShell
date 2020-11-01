@@ -57,7 +57,7 @@ namespace Microsoft.PowerShell.Commands
             }
         }
 
-        private List<string> GetApplicableAccessRights(int accessMask, AccessRightTypeNames? typeName)
+        private static List<string> GetApplicableAccessRights(int accessMask, AccessRightTypeNames? typeName)
         {
             List<Type> typesToExamine = new List<Type>();
             List<string> foundAccessRightNames = new List<string>();

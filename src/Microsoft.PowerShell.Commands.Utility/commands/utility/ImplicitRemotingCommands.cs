@@ -2848,7 +2848,7 @@ function Get-PSImplicitRemotingClientSideParameters
 }}
         ";
 
-        private void GenerateCommandProxy(TextWriter writer, CommandMetadata commandMetadata)
+        private static void GenerateCommandProxy(TextWriter writer, CommandMetadata commandMetadata)
         {
             if (writer == null)
             {
@@ -2897,7 +2897,7 @@ function Get-PSImplicitRemotingClientSideParameters
 & $script:ExportModuleMember -Function {0}
         ";
 
-        private void GenerateExportDeclaration(TextWriter writer, IEnumerable<CommandMetadata> listOfCommandMetadata)
+        private static void GenerateExportDeclaration(TextWriter writer, IEnumerable<CommandMetadata> listOfCommandMetadata)
         {
             if (writer == null)
             {
@@ -2970,7 +2970,7 @@ function Get-PSImplicitRemotingClientSideParameters
 & $script:ExportModuleMember -Alias {0}
         ";
 
-        private void GenerateAliases(TextWriter writer, Dictionary<string, string> alias2resolvedCommandName)
+        private static void GenerateAliases(TextWriter writer, Dictionary<string, string> alias2resolvedCommandName)
         {
             GenerateSectionSeparator(writer);
 

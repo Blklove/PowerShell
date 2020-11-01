@@ -159,7 +159,7 @@ namespace Microsoft.PowerShell.Commands
             return xrs;
         }
 
-        private bool TryConvertToXml(string xml, out object doc, ref Exception exRef)
+        private static bool TryConvertToXml(string xml, out object doc, ref Exception exRef)
         {
             try
             {

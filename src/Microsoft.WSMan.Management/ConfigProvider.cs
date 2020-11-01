@@ -2935,7 +2935,7 @@ namespace Microsoft.WSMan.Management
 
         #endregion "WsMan linking Operations"
 
-        private string GetURIWithFilter(string uri, Hashtable cmdlinevalues)
+        private static string GetURIWithFilter(string uri, Hashtable cmdlinevalues)
         {
             StringBuilder sburi = new StringBuilder(uri);
             if (cmdlinevalues != null)
@@ -2979,7 +2979,7 @@ namespace Microsoft.WSMan.Management
             return filter.ToString();
         }
 
-        private bool IsPKey(string value, string ResourceURI)
+        private static bool IsPKey(string value, string ResourceURI)
         {
             bool result = false;
             if (ResourceURI.Contains(WSManStringLiterals.containerListener))
@@ -4877,7 +4877,7 @@ namespace Microsoft.WSMan.Management
             return objConfiglvl;
         }
 
-        private ArrayList ProcessPluginResourceLevel(XmlDocument xmldoc, out ArrayList arrSecurity)
+        private static ArrayList ProcessPluginResourceLevel(XmlDocument xmldoc, out ArrayList arrSecurity)
         {
             ArrayList Resources = null;
             ArrayList nSecurity = null;
@@ -5320,7 +5320,7 @@ namespace Microsoft.WSMan.Management
             return sbvalues.ToString();
         }
 
-        private void AddSecurityProperties(
+        private static void AddSecurityProperties(
             PSMemberInfoCollection<PSPropertyInfo> properties,
             StringBuilder sbValues)
         {

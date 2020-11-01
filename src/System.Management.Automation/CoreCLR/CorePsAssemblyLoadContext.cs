@@ -393,7 +393,7 @@ namespace System.Management.Automation
         }
 
         // Find the assembly under 'gacRoot' and select the latest version.
-        private bool FindInGac(string gacRoot, AssemblyName assemblyName, out string assemblyPath)
+        private static bool FindInGac(string gacRoot, AssemblyName assemblyName, out string assemblyPath)
         {
             bool assemblyFound = false;
             assemblyPath = null;
@@ -430,7 +430,7 @@ namespace System.Management.Automation
         /// <summary>
         /// Try to get the specified assembly from cache.
         /// </summary>
-        private bool TryGetAssemblyFromCache(AssemblyName assemblyName, out Assembly asmLoaded)
+        private static bool TryGetAssemblyFromCache(AssemblyName assemblyName, out Assembly asmLoaded)
         {
             if (s_assemblyCache.TryGetValue(assemblyName.Name, out asmLoaded))
             {

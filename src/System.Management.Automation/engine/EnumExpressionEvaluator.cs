@@ -385,7 +385,7 @@ namespace System.Management.Automation
         /// <returns>
         /// A generic list of tokenized input.
         /// </returns>
-        private List<Token> TokenizeInput(string input)
+        private static List<Token> TokenizeInput(string input)
         {
             List<Token> tokenList = new List<Token>();
             int _offset = 0;

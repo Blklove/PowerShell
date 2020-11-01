@@ -5208,7 +5208,7 @@ namespace System.Management.Automation
         /// <summary>
         /// Displays the help text for the debugger commands.
         /// </summary>
-        private void DisplayHelp(PSHost host, IList<PSObject> output)
+        private static void DisplayHelp(PSHost host, IList<PSObject> output)
         {
             WriteLine(string.Empty, host, output);
             WriteLine(StringUtil.Format(DebuggerStrings.StepHelp, StepShortcut, StepCommand), host, output);

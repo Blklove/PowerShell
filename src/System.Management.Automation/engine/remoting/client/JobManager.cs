@@ -616,7 +616,7 @@ namespace System.Management.Automation
         /// <param name="sourceAdapter"></param>
         /// <param name="jobSourceAdapterTypes"></param>
         /// <returns></returns>
-        private bool CheckTypeNames(JobSourceAdapter sourceAdapter, string[] jobSourceAdapterTypes)
+        private static bool CheckTypeNames(JobSourceAdapter sourceAdapter, string[] jobSourceAdapterTypes)
         {
             // If no type names were specified then allow all adapter types.
             if (jobSourceAdapterTypes == null ||

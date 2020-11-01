@@ -2080,7 +2080,7 @@ namespace System.Management.Automation
         /// </summary>
         /// <param name="enumerableType">The type to infer enumerated item type from.</param>
         /// <returns>The inferred enumerated item type.</returns>
-        private Type GetMostSpecificEnumeratedItemType(Type enumerableType)
+        private static Type GetMostSpecificEnumeratedItemType(Type enumerableType)
         {
             if (enumerableType.IsArray)
             {

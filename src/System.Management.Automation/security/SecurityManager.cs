@@ -421,7 +421,7 @@ namespace Microsoft.PowerShell
 
         // Checks that a publisher is trusted by the system or is one of
         // the signed product binaries
-        private bool IsTrustedPublisher(Signature signature, string file)
+        private static bool IsTrustedPublisher(Signature signature, string file)
         {
             // Get the thumbprint of the current signature
             X509Certificate2 signerCertificate = signature.SignerCertificate;
@@ -636,7 +636,7 @@ namespace Microsoft.PowerShell
             return allowRun;
         }
 
-        private RunPromptDecision AuthenticodePrompt(string path,
+        private static RunPromptDecision AuthenticodePrompt(string path,
                                                 Signature signature,
                                                 PSHost host)
         {
@@ -709,7 +709,7 @@ namespace Microsoft.PowerShell
             return decision;
         }
 
-        private RunPromptDecision RemoteFilePrompt(string path, PSHost host)
+        private static RunPromptDecision RemoteFilePrompt(string path, PSHost host)
         {
             if ((host == null) || (host.UI == null))
             {

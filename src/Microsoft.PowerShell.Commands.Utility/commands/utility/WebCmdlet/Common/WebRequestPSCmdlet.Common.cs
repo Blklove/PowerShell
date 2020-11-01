@@ -1954,7 +1954,7 @@ namespace Microsoft.PowerShell.Commands
         /// </summary>
         /// <param name="fieldName">The Field Name to use for the <see cref="StreamContent" /></param>
         /// <param name="file">The file to use for the <see cref="StreamContent" /></param>
-        private StreamContent GetMultipartFileContent(object fieldName, FileInfo file)
+        private static StreamContent GetMultipartFileContent(object fieldName, FileInfo file)
         {
             var result = GetMultipartStreamContent(fieldName: fieldName, stream: new FileStream(file.FullName, FileMode.Open));
             // .NET does not enclose field names in quotes, however, modern browsers and curl do.

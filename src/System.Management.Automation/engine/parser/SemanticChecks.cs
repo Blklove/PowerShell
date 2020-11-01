@@ -1179,7 +1179,7 @@ namespace System.Management.Automation.Language
             return AstVisitAction.Continue;
         }
 
-        private void CheckMemberAccess(MemberExpressionAst ast)
+        private static void CheckMemberAccess(MemberExpressionAst ast)
         {
             // If the member access is not constant, it may be considered suspicious
             if (ast.Member is not ConstantExpressionAst)

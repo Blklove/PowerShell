@@ -864,7 +864,7 @@ namespace Microsoft.Powershell.Commands.GetCounter.PdhNative
             return res;
         }
 
-        private uint MakeAllInstancePath(string origPath, out string unifiedPath)
+        private static uint MakeAllInstancePath(string origPath, out string unifiedPath)
         {
             unifiedPath = origPath;
 

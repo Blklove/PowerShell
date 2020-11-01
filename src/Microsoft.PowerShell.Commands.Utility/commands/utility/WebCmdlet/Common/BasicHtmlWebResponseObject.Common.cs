@@ -186,7 +186,7 @@ namespace Microsoft.PowerShell.Commands
             }
         }
 
-        private PSObject CreateHtmlObject(string html, string tagName)
+        private static PSObject CreateHtmlObject(string html, string tagName)
         {
             PSObject elementObject = new PSObject();
 
