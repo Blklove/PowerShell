@@ -132,7 +132,7 @@ namespace System.Management.Automation.Remoting
         /// <summary>
         /// Is runspace pushed.
         /// </summary>
-        private bool IsRunspacePushed(PSHost host)
+        private static bool IsRunspacePushed(PSHost host)
         {
             IHostSupportsInteractiveSession host2 = host as IHostSupportsInteractiveSession;
             if (host2 == null) { return false; }

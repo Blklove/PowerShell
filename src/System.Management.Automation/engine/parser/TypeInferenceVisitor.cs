@@ -1701,7 +1701,7 @@ namespace System.Management.Automation
             return false;
         }
 
-        private void AddTypesFromMethodCacheEntry(
+        private static void AddTypesFromMethodCacheEntry(
             DotNetAdapter.MethodCacheEntry methodCacheEntry,
             List<PSTypeName> result,
             bool isInvokeMemberExpressionAst)
@@ -2156,7 +2156,7 @@ namespace System.Management.Automation
         /// The value of <paramref name="interfaceType" /> if it can be used to infer a specific
         /// enumerated type, otherwise <see langword="null" />.
         /// </returns>
-        private Type GetGenericCollectionLikeInterface(
+        private static Type GetGenericCollectionLikeInterface(
             Type interfaceType,
             ref bool hasSeenNonGeneric,
             ref bool hasSeenDictionaryEnumerator)

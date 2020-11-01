@@ -1656,7 +1656,7 @@ namespace System.Management.Automation
             }
         }
 
-        private bool SerializationWouldHaveNoEffect(PSObject result)
+        private static bool SerializationWouldHaveNoEffect(PSObject result)
         {
             if (result == null)
             {

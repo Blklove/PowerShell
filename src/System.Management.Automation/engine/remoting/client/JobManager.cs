@@ -641,7 +641,7 @@ namespace System.Management.Automation
             return false;
         }
 
-        private string GetAdapterName(JobSourceAdapter sourceAdapter)
+        private static string GetAdapterName(JobSourceAdapter sourceAdapter)
         {
             return (string.IsNullOrEmpty(sourceAdapter.Name) == false ?
                 sourceAdapter.Name :

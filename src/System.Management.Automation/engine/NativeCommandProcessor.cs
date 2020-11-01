@@ -1169,7 +1169,7 @@ namespace System.Management.Automation
             return startInfo;
         }
 
-        private bool IsDownstreamOutDefault(Pipe downstreamPipe)
+        private static bool IsDownstreamOutDefault(Pipe downstreamPipe)
         {
             Diagnostics.Assert(downstreamPipe != null, "Caller makes sure the passed-in parameter is not null.");
 
@@ -1316,7 +1316,7 @@ namespace System.Management.Automation
 
         // On Windows, check the extension list and see if we should try to execute this directly.
         // Otherwise, use the platform library to check executability
-        private bool IsExecutable(string path)
+        private static bool IsExecutable(string path)
         {
 #if UNIX
             return Platform.NonWindowsIsExecutable(this.Path);

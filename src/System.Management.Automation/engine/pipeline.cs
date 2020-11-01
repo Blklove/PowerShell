@@ -174,7 +174,7 @@ namespace System.Management.Automation.Internal
             Log(message, null, PipelineExecutionStatus.Error);
         }
 
-        private string GetCommand(InvocationInfo invocationInfo)
+        private static string GetCommand(InvocationInfo invocationInfo)
         {
             if (invocationInfo == null)
                 return string.Empty;

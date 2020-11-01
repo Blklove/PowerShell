@@ -1347,7 +1347,7 @@ namespace Microsoft.PowerShell.Commands
         // HandleEventIdHashValue helper for hashtable structured query builder.
         // Constructs and returns EventId XPath portion as a string.
         //
-        private string HandleEventIdHashValue(object value)
+        private static string HandleEventIdHashValue(object value)
         {
             StringBuilder ret = new StringBuilder();
             Array idsArray = value as Array;
@@ -1377,7 +1377,7 @@ namespace Microsoft.PowerShell.Commands
         // HandleLevelHashValue helper for hashtable structured query builder.
         // Constructs and returns Level XPath portion as a string.
         //
-        private string HandleLevelHashValue(object value)
+        private static string HandleLevelHashValue(object value)
         {
             StringBuilder ret = new StringBuilder();
             Array levelsArray = value as Array;
@@ -1565,7 +1565,7 @@ namespace Microsoft.PowerShell.Commands
         // HandleDataHashValue helper for hashtable structured query builder.
         // Constructs and returns EventData/Data XPath portion as a string.
         //
-        private string HandleDataHashValue(object value)
+        private static string HandleDataHashValue(object value)
         {
             StringBuilder ret = new StringBuilder();
             Array dataArray = value as Array;
@@ -1596,7 +1596,7 @@ namespace Microsoft.PowerShell.Commands
         // Constructs and returns named event data field XPath portion as a string.
         // Fix Issue #2327
         //
-        private string HandleNamedDataHashValue(string key, object value)
+        private static string HandleNamedDataHashValue(string key, object value)
         {
             StringBuilder ret = new StringBuilder();
             Array dataArray = value as Array;
@@ -1910,7 +1910,7 @@ namespace Microsoft.PowerShell.Commands
         // "System/Provider[@Name='a' or @Name='b']"
         // for all provider names specified in the "providers" argument.
         //
-        private string BuildProvidersPredicate(StringCollection providers)
+        private static string BuildProvidersPredicate(StringCollection providers)
         {
             if (providers.Count == 0)
             {

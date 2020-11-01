@@ -44,7 +44,7 @@ namespace PSTests.Parallel
             File.Delete(testPath);
         }
 
-        private ExecutionContext GetExecutionContext()
+        private static ExecutionContext GetExecutionContext()
         {
             CultureInfo currentCulture = CultureInfo.CurrentCulture;
             PSHost hostInterface = new DefaultHost(currentCulture, currentCulture);

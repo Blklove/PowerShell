@@ -5991,7 +5991,7 @@ namespace System.Management.Automation.Language
             return string.Format(CultureInfo.InvariantCulture, "SetMember: {0}{1} ver:{2}", _static ? "static " : string.Empty, Name, _getMemberBinder._version);
         }
 
-        private Expression GetTransformedExpression(IEnumerable<ArgumentTransformationAttribute> transformationAttributes, Expression originalExpression)
+        private static Expression GetTransformedExpression(IEnumerable<ArgumentTransformationAttribute> transformationAttributes, Expression originalExpression)
         {
             if (transformationAttributes == null)
             {
@@ -6279,7 +6279,7 @@ namespace System.Management.Automation.Language
                             if (value.Value == null)
                             {
                                 expr = Expression.Block(
-                                    Expression.Assign(lhs, this.GetTransformedExpression(argumentTransformationAttributes, Expression.Constant(null, lhsType))),
+                                    Expression.Assign(lhs, GetTransformedExpression(argumentTransformationAttributes, Expression.Constant(null, lhsType))),
                                     ExpressionCache.NullConstant);
                             }
                             else
@@ -6288,7 +6288,7 @@ namespace System.Management.Automation.Language
                                 Expression assignmentExpression;
                                 if (transformationNeeded)
                                 {
-                                    var transformedExpr = this.GetTransformedExpression(argumentTransformationAttributes, value.Expression);
+                                    var transformedExpr = GetTransformedExpression(argumentTransformationAttributes, value.Expression);
                                     assignmentExpression = DynamicExpression.Dynamic(PSConvertBinder.Get(nullableUnderlyingType), nullableUnderlyingType, transformedExpr);
                                 }
                                 else
@@ -6310,7 +6310,7 @@ namespace System.Management.Automation.Language
                             if (transformationNeeded)
                             {
                                 assignedValue = DynamicExpression.Dynamic(PSConvertBinder.Get(lhsType), lhsType,
-                                   this.GetTransformedExpression(argumentTransformationAttributes, value.Expression));
+                                   GetTransformedExpression(argumentTransformationAttributes, value.Expression));
                             }
                             else
                             {

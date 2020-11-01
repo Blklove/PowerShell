@@ -534,7 +534,7 @@ namespace Microsoft.PowerShell.Commands
         /// </summary>
         /// <param name="name">The string to quote.</param>
         /// <returns>The quoted string.</returns>
-        private string QuoteName(string name)
+        private static string QuoteName(string name)
         {
             if (name == null)
                 return "''";
@@ -622,7 +622,7 @@ namespace Microsoft.PowerShell.Commands
         /// </summary>
         /// <param name="moduleSpecs"></param>
         /// <returns></returns>
-        private IEnumerable PreProcessModuleSpec(IEnumerable moduleSpecs)
+        private static IEnumerable PreProcessModuleSpec(IEnumerable moduleSpecs)
         {
             if (moduleSpecs != null)
             {
@@ -897,7 +897,7 @@ namespace Microsoft.PowerShell.Commands
                 _indent, resourceString, streamWriter.NewLine, key, value);
         }
 
-        private string ManifestComment(string insert, StreamWriter streamWriter)
+        private static string ManifestComment(string insert, StreamWriter streamWriter)
         {
             // Prefix a non-empty string with a space for formatting reasons...
             if (!string.IsNullOrEmpty(insert))

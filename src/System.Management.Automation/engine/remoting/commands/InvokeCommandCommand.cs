@@ -1876,7 +1876,7 @@ namespace Microsoft.PowerShell.Commands
                 this.Host);
         }
 
-        private void StopProgressBar(
+        private static void StopProgressBar(
             long sourceId)
         {
             s_RCProgress.StopProgress(sourceId);
@@ -1955,7 +1955,7 @@ namespace Microsoft.PowerShell.Commands
         /// Process the stream object before writing it in the specified collection.
         /// </summary>
         /// <param name="streamObject">Stream object to process.</param>
-        private void PreProcessStreamObject(PSStreamObject streamObject)
+        private static void PreProcessStreamObject(PSStreamObject streamObject)
         {
             ErrorRecord errorRecord = streamObject.Value as ErrorRecord;
 

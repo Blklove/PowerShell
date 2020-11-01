@@ -45,7 +45,7 @@ namespace Microsoft.PowerShell.Commands
         private AccessRightTypeNames _type;
         private bool _isTypeSet = false;
 
-        private string ConvertToNTAccount(SecurityIdentifier securityIdentifier)
+        private static string ConvertToNTAccount(SecurityIdentifier securityIdentifier)
         {
             try
             {
@@ -95,7 +95,7 @@ namespace Microsoft.PowerShell.Commands
             return foundAccessRightNames;
         }
 
-        private Type GetRealAccessRightType(AccessRightTypeNames typeName)
+        private static Type GetRealAccessRightType(AccessRightTypeNames typeName)
         {
             switch (typeName)
             {

@@ -2063,7 +2063,7 @@ namespace System.Management.Automation
         }
 
         // Detect if the GetChildItemDynamicParameters has been overridden.
-        private bool HasGetChildItemDynamicParameters(ProviderInfo providerInfo)
+        private static bool HasGetChildItemDynamicParameters(ProviderInfo providerInfo)
         {
             Type providerType = providerInfo.ImplementingType;
 
@@ -4782,7 +4782,7 @@ namespace System.Management.Automation
 
         // This function validates a remote path, and if it exists, it returns the root path.
         //
-        private string ValidateRemotePathAndGetRoot(string path, Runspaces.PSSession session, CmdletProviderContext context, PSLanguageMode? languageMode, bool sourceIsRemote)
+        private static string ValidateRemotePathAndGetRoot(string path, Runspaces.PSSession session, CmdletProviderContext context, PSLanguageMode? languageMode, bool sourceIsRemote)
         {
             Hashtable op = null;
 
@@ -4900,7 +4900,7 @@ namespace System.Management.Automation
             return root;
         }
 
-        private bool isValidSession(PSSession session, CmdletProviderContext context, out PSLanguageMode? languageMode)
+        private static bool isValidSession(PSSession session, CmdletProviderContext context, out PSLanguageMode? languageMode)
         {
             // session == null is validated by the parameter binding
             if (session.Availability != RunspaceAvailability.Available)

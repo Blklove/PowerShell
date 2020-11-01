@@ -2451,7 +2451,7 @@ namespace System.Management.Automation
             }
         }
 
-        private uint NewParameterSetPromptingData(
+        private static uint NewParameterSetPromptingData(
             Dictionary<uint, ParameterSetPromptingData> promptingData,
             MergedCompiledCommandParameter parameter,
             ParameterSetSpecificMetadata parameterSetMetadata,

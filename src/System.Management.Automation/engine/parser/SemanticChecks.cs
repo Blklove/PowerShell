@@ -62,12 +62,12 @@ namespace System.Management.Automation.Language
             return fnMemberAst != null ? fnMemberAst.IsStatic : ((PropertyMemberAst)currentMember).IsStatic;
         }
 
-        private bool IsValidAttributeArgument(Ast ast, IsConstantValueVisitor visitor)
+        private static bool IsValidAttributeArgument(Ast ast, IsConstantValueVisitor visitor)
         {
             return (bool)ast.Accept(visitor);
         }
 
-        private (string id, string msg) GetNonConstantAttributeArgErrorExpr(IsConstantValueVisitor visitor)
+        private static (string id, string msg) GetNonConstantAttributeArgErrorExpr(IsConstantValueVisitor visitor)
         {
             if (visitor.CheckingClassAttributeArguments)
             {
@@ -1197,7 +1197,7 @@ namespace System.Management.Automation.Language
         }
 
         // Mark all of the parents of an AST as suspicious
-        private void MarkAstParentsAsSuspicious(Ast ast)
+        private static void MarkAstParentsAsSuspicious(Ast ast)
         {
             Ast targetAst = ast;
             var parent = ast;

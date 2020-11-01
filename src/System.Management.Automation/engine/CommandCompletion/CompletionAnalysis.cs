@@ -926,7 +926,7 @@ namespace System.Management.Automation
         }
 
         // Helper method to auto complete hashtable key
-        private List<CompletionResult> GetResultForHashtable(CompletionContext completionContext)
+        private static List<CompletionResult> GetResultForHashtable(CompletionContext completionContext)
         {
             var lastAst = completionContext.RelatedAsts.Last();
             HashtableAst tempHashtableAst = null;
@@ -987,7 +987,7 @@ namespace System.Management.Automation
         }
 
         // Helper method to look for an incomplete assignment pair in hash table.
-        private bool CheckForPendingAssignment(HashtableAst hashTableAst)
+        private static bool CheckForPendingAssignment(HashtableAst hashTableAst)
         {
             foreach (var keyValue in hashTableAst.KeyValuePairs)
             {
@@ -1055,7 +1055,7 @@ namespace System.Management.Automation
             return stringToComplete;
         }
 
-        private Tuple<ExpressionAst, StatementAst> GetHashEntryContainsCursor(
+        private static Tuple<ExpressionAst, StatementAst> GetHashEntryContainsCursor(
             IScriptPosition cursor,
             HashtableAst hashTableAst,
             bool isCursorInString)
@@ -1633,7 +1633,7 @@ namespace System.Management.Automation
         /// <param name="ast"></param>
         /// <param name="keywordAst"></param>
         /// <returns></returns>
-        private ConfigurationDefinitionAst GetAncestorConfigurationAstAndKeywordAst(
+        private static ConfigurationDefinitionAst GetAncestorConfigurationAstAndKeywordAst(
             IScriptPosition cursorPosition,
             Ast ast,
             out DynamicKeywordStatementAst keywordAst)
@@ -1669,7 +1669,7 @@ namespace System.Management.Automation
         /// <param name="keywordAst"></param>
         /// <param name="matched"></param>
         /// <returns></returns>
-        private List<CompletionResult> GetResultForIdentifierInConfiguration(
+        private static List<CompletionResult> GetResultForIdentifierInConfiguration(
             CompletionContext completionContext,
             ConfigurationDefinitionAst configureAst,
             DynamicKeywordStatementAst keywordAst,
@@ -2083,7 +2083,7 @@ namespace System.Management.Automation
             return result;
         }
 
-        private List<CompletionResult> GetResultForAttributeArgument(CompletionContext completionContext, ref int replacementIndex, ref int replacementLength)
+        private static List<CompletionResult> GetResultForAttributeArgument(CompletionContext completionContext, ref int replacementIndex, ref int replacementLength)
         {
             // Attribute member arguments
             Type attributeType = null;

@@ -1582,7 +1582,7 @@ namespace Microsoft.PowerShell.Commands
         /// <summary>
         /// Map the return code from 'AttachDebugger' to error message.
         /// </summary>
-        private string MapReturnCodeToErrorMessage(int returnCode)
+        private static string MapReturnCodeToErrorMessage(int returnCode)
         {
             string errorMessage = string.Empty;
             switch (returnCode)
@@ -2110,7 +2110,7 @@ namespace Microsoft.PowerShell.Commands
             return filepath;
         }
 
-        private void LoadEnvironmentVariable(ProcessStartInfo startinfo, IDictionary EnvironmentVariables)
+        private static void LoadEnvironmentVariable(ProcessStartInfo startinfo, IDictionary EnvironmentVariables)
         {
             var processEnvironment = startinfo.EnvironmentVariables;
             foreach (DictionaryEntry entry in EnvironmentVariables)
