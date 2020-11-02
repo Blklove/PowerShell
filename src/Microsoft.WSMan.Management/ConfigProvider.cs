@@ -4717,7 +4717,7 @@ namespace Microsoft.WSMan.Management
             keys = keysColumns.Split('|');
         }
 
-        private void ProcessCertMappingObjects(XmlDocument xmlCerts, out Hashtable Certcache, out Hashtable Keyscache)
+        private static void ProcessCertMappingObjects(XmlDocument xmlCerts, out Hashtable Certcache, out Hashtable Keyscache)
         {
             Hashtable lCache = new Hashtable();
             Hashtable kCache = new Hashtable();
@@ -4775,7 +4775,7 @@ namespace Microsoft.WSMan.Management
             Keyscache = kCache;
         }
 
-        private void ProcessListenerObjects(XmlDocument xmlListeners, out Hashtable listenercache, out Hashtable Keyscache)
+        private static void ProcessListenerObjects(XmlDocument xmlListeners, out Hashtable listenercache, out Hashtable Keyscache)
         {
             Hashtable lCache = new Hashtable();
             Hashtable kCache = new Hashtable();
@@ -5206,7 +5206,7 @@ namespace Microsoft.WSMan.Management
             return passwordValueToAdd;
         }
 
-        private string ConstructResourceXml(PSObject objinputparams, ArrayList resources, ArrayList securities)
+        private static string ConstructResourceXml(PSObject objinputparams, ArrayList resources, ArrayList securities)
         {
             StringBuilder sbvalues = new StringBuilder(string.Empty);
             if (objinputparams == null && resources == null)
