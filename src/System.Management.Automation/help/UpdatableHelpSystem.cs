@@ -1089,7 +1089,7 @@ namespace System.Management.Automation.Help
         }
 
 #if UNIX
-        private bool ExpandArchive(string source, string destination)
+        private static bool ExpandArchive(string source, string destination)
         {
             bool sucessfulDecompression = false;
 

@@ -1316,7 +1316,11 @@ namespace System.Management.Automation
 
         // On Windows, check the extension list and see if we should try to execute this directly.
         // Otherwise, use the platform library to check executability
-        private static bool IsExecutable(string path)
+        [SuppressMessage(
+            "Performance",
+            "CA1822:Mark members as static",
+            Justification = "Accesses instance members in preprocessor branch.")]
+        private bool IsExecutable(string path)
         {
 #if UNIX
             return Platform.NonWindowsIsExecutable(this.Path);

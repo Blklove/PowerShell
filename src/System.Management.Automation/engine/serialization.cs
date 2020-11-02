@@ -2958,6 +2958,10 @@ namespace System.Management.Automation
             }
         }
 
+        [SuppressMessage(
+            "Performance",
+            "CA1822:Mark members as static",
+            Justification = "Accesses instance members in preprocessor branch.")]
         private bool DuplicateRefIdsAllowed
         {
             get
