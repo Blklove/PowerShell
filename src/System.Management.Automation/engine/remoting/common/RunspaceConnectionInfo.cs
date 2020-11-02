@@ -2298,7 +2298,7 @@ namespace System.Management.Automation.Runspaces
                     case '"':
                         // Special case for arguments within quotes
                         // Just return argument value within the quotes
-                        while ((++i < argsLength) && argsToParse[i] != '"') { };
+                        while ((++i < argsLength) && argsToParse[i] != '"') { }
                         if (iStart < argsLength - 1)
                         {
                             iStart++;
@@ -2308,12 +2308,12 @@ namespace System.Management.Automation.Runspaces
 
                     default:
                         // Common case for parsing arguments with space character delimiter
-                        while ((++i < argsLength) && argsToParse[i] != ' ') { };
+                        while ((++i < argsLength) && argsToParse[i] != ' ') { }
                         break;
                 }
 
                 argvList.Add(argsToParse.Substring(iStart, (i-iStart)));
-                while ((++i < argsLength) && argsToParse[i] == ' ') { };
+                while ((++i < argsLength) && argsToParse[i] == ' ') { }
             }
 
             return argvList.ToArray();

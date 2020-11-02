@@ -5784,7 +5784,7 @@ namespace System.Management.Automation
             return CacheConversion(fromType, toType, converter, rank);
         }
 
-        internal class Null { };
+        internal class Null { }
 
         private static IConversionData FigureConversionFromNull(Type toType)
         {

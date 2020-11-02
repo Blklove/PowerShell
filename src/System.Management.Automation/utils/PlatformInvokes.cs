@@ -34,7 +34,7 @@ namespace System.Management.Automation
             {
                 return ((long)dwHighDateTime << 32) + dwLowDateTime;
             }
-        };
+        }
 
         [Flags]
         // dwDesiredAccess of CreateFile

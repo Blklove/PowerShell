@@ -3382,7 +3382,7 @@ namespace System.Management.Automation
             No,
             YesToAll,
             NoToAll
-        };
+        }
 
         internal ContinueStatus lastShouldProcessContinueStatus = ContinueStatus.Yes;
         internal ContinueStatus lastErrorContinueStatus = ContinueStatus.Yes;
