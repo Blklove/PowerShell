@@ -5063,7 +5063,7 @@ namespace Microsoft.WSMan.Management
         ///<param name="securities">List of Securities</param>
         ///<param name="initParams">List of initialization parameters.</param>
         /// <returns>An Configuration XML, ready to send to server.</returns>
-        private string ConstructPluginXml(PSObject objinputparam, string ResourceURI, string host, string Operation, ArrayList resources, ArrayList securities, ArrayList initParams)
+        private static string ConstructPluginXml(PSObject objinputparam, string ResourceURI, string host, string Operation, ArrayList resources, ArrayList securities, ArrayList initParams)
         {
             StringBuilder sbvalues = new StringBuilder();
             sbvalues.Append("<PlugInConfiguration ");
