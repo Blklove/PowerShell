@@ -165,7 +165,6 @@ namespace Microsoft.PowerShell.Commands
         /// process name which is not found even though it contains
         /// no wildcards.
         /// </summary>
-        /// <returns></returns>
         private void RetrieveMatchingProcessesByProcessName()
         {
             if (processNames == null)
@@ -217,7 +216,6 @@ namespace Microsoft.PowerShell.Commands
         /// Generates a non-terminating error for each specified
         /// process ID which is not found.
         /// </summary>
-        /// <returns></returns>
         private void RetrieveMatchingProcessesById()
         {
             if (processIds == null)
@@ -253,7 +251,6 @@ namespace Microsoft.PowerShell.Commands
         /// Retrieves the list of all processes matching the InputObject
         /// parameter.
         /// </summary>
-        /// <returns></returns>
         private void RetrieveProcessesByInput()
         {
             if (InputObject == null)

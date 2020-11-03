@@ -1440,9 +1440,6 @@ namespace Microsoft.PowerShell.Commands
         /// <summary>
         /// Reads the next record from the file and returns parsed collection of string.
         /// </summary>
-        /// <returns>
-        /// Parsed collection of strings.
-        /// </returns>
         private void ParseNextRecord(List<string> result, StringBuilder current)
         {
             result.Clear();

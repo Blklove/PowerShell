@@ -692,9 +692,6 @@ namespace Microsoft.PowerShell.Commands
         /// <param name="recurse">
         /// Recursively remove.
         /// </param>
-        /// <returns>
-        /// Nothing.
-        /// </returns>
         /// <exception cref="System.ArgumentException">
         ///     path is null or empty.
         ///     destination is null or empty.
@@ -798,9 +795,6 @@ namespace Microsoft.PowerShell.Commands
         /// <param name="destination">
         /// The path of the destination.
         /// </param>
-        /// <returns>
-        /// Nothing.  Moved items are written to the context's pipeline.
-        /// </returns>
         /// <exception cref="System.ArgumentException">
         ///     path is null or empty.
         ///     destination is null or empty.
@@ -933,10 +927,6 @@ namespace Microsoft.PowerShell.Commands
         /// <param name="value">
         /// Ignored
         /// </param>
-        /// <returns>
-        /// Nothing.  The new certificate store object is
-        /// written to the context's pipeline.
-        /// </returns>
         /// <exception cref="System.ArgumentException">
         ///     path is null or empty.
         /// </exception>
@@ -1615,7 +1605,6 @@ namespace Microsoft.PowerShell.Commands
         /// Delete private key.
         /// </summary>
         /// <param name="pProvInfo">Key prov info.</param>
-        /// <returns>No return.</returns>
         [SuppressMessage("Microsoft.Usage", "CA1806:DoNotIgnoreMethodResults", MessageId = "System.Management.Automation.Security.NativeMethods.NCryptSetProperty(System.IntPtr,System.String,System.Void*,System.Int32,System.Int32)")]
         [SuppressMessage("Microsoft.Usage", "CA1806:DoNotIgnoreMethodResults", MessageId = "System.Management.Automation.Security.NativeMethods.NCryptFreeObject(System.IntPtr)")]
         private void DoDeleteKey(IntPtr pProvInfo)
@@ -1743,7 +1732,6 @@ namespace Microsoft.PowerShell.Commands
         /// <param name="storeName">The store name.</param>
         /// <param name="fDeleteKey">Boolean to specify whether or not to delete private key.</param>
         /// <param name = "sourcePath">Source path.</param>
-        /// <returns>No return.</returns>
         private void RemoveCertStore(string storeName, bool fDeleteKey, string sourcePath)
         {
             // if recurse is true, remove every cert in the store
@@ -1805,7 +1793,6 @@ namespace Microsoft.PowerShell.Commands
         /// <param name="fDeleteKey">Boolean to specify whether or not to delete private key.</param>
         /// <param name="fMachine">Machine context or user.</param>
         /// <param name = "sourcePath">Source path.</param>
-        /// <returns>No return.</returns>
         private void RemoveCertItem(X509Certificate2 cert, bool fDeleteKey, bool fMachine, string sourcePath)
         {
             if (cert != null)
@@ -1840,7 +1827,6 @@ namespace Microsoft.PowerShell.Commands
         /// <param name="fDeleteKey">Boolean to specify whether or not to delete private key.</param>
         /// <param name="fMachine">Machine context or user.</param>
         /// <param name = "sourcePath">Source path.</param>
-        /// <returns>No return.</returns>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1806:DoNotIgnoreMethodResults")]
         private void DoRemove(X509Certificate2 cert, bool fDeleteKey, bool fMachine, string sourcePath)
         {
@@ -1918,7 +1904,6 @@ namespace Microsoft.PowerShell.Commands
         /// Commit store for UserDS store.
         /// </summary>
         /// <param name="storeHandle">An IntPtr for store handle.</param>
-        /// <returns>No return.</returns>
         private void CommitUserDS(IntPtr storeHandle)
         {
             if (!Security.NativeMethods.CertControlStore(
@@ -1938,7 +1923,6 @@ namespace Microsoft.PowerShell.Commands
         /// <param name="cert">An X509Certificate2.</param>
         /// <param name="store">An X509NativeStore.</param>
         /// <param name="sourcePath">Source path.</param>
-        /// <returns>No return.</returns>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1806:DoNotIgnoreMethodResults")]
         private void DoMove(string destination, X509Certificate2 cert, X509NativeStore store, string sourcePath)
         {
@@ -2304,7 +2288,6 @@ namespace Microsoft.PowerShell.Commands
         /// </param>
         /// <param name="returnNames">Whether we only need the names.</param>
         /// <param name="filter">Filter info.</param>
-        /// <returns> Does not return a value.</returns>
         private void GetChildItemsOrNames(
             string path,
             bool recurse,
@@ -2427,7 +2410,6 @@ namespace Microsoft.PowerShell.Commands
         /// <param name="pathElements">Path elements.</param>
         /// <param name="returnNames">Whether we should return only the names (instead of objects).</param>
         /// <param name="filter">Filter info.</param>
-        /// <returns>Does not return a value.</returns>
         private void GetCertificatesOrNames(string path,
                                              string[] pathElements,
                                              bool returnNames,
@@ -2568,7 +2550,6 @@ namespace Microsoft.PowerShell.Commands
         /// <param name="recurse">Recursively return all items if true.</param>
         /// <param name="returnNames"></param>
         /// <param name="filter">Filter info.</param>
-        /// <returns> Does not return a value.</returns>
         private void GetStoresOrNames(
             string path,
             bool recurse,

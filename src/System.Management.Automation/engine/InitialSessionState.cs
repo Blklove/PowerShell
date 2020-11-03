@@ -1834,7 +1834,6 @@ namespace System.Management.Automation.Runspaces
         /// Add a list of modules to import when the runspace is created.
         /// </summary>
         /// <param name="name">The modules to add.</param>
-        /// <returns></returns>
         public void ImportPSModule(params string[] name)
         {
             if (name == null)
@@ -1893,7 +1892,6 @@ namespace System.Management.Automation.Runspaces
         /// Add a list of core modules to import when the runspace is created.
         /// </summary>
         /// <param name="name">The modules to add.</param>
-        /// <returns></returns>
         internal void ImportPSCoreModule(string[] name)
         {
             if (name == null)
